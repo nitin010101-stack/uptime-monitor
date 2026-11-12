@@ -1,0 +1,16 @@
+{
+  "failures": {
+    "GitHub": 0,
+    "GitHub API": 0,
+    "GitHub Status": 0,
+    "PyPI": 0,
+    "npm Registry": 0,
+    "Python.org": 0,
+    "Wikipedia": 0,
+    "Cloudflare": 0,
+    "Mozilla": 0,
+    "Linux Kernel": 0,
+    "Example": 0
+  },
+  "open": []
+}
