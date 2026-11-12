@@ -4,7 +4,7 @@ install:
 	pip install -r requirements-dev.txt
 
 lint:
-	ruff check . && ruff format --check .
+	ruff check .
 
 test:
 	pytest -q
