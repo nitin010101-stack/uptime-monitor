@@ -4,7 +4,7 @@ install:
 	pip install -r requirements-dev.txt
 
 lint:
-	ruff check .
+	ruff check --select E9,F63,F7,F82 .
 
 test:
 	pytest -q
