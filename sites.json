@@ -1,0 +1,13 @@
+[
+  {"name": "GitHub",           "url": "https://github.com"},
+  {"name": "GitHub API",       "url": "https://api.github.com"},
+  {"name": "GitHub Status",    "url": "https://www.githubstatus.com"},
+  {"name": "PyPI",             "url": "https://pypi.org"},
+  {"name": "npm Registry",     "url": "https://registry.npmjs.org"},
+  {"name": "Python.org",       "url": "https://www.python.org"},
+  {"name": "Wikipedia",        "url": "https://www.wikipedia.org"},
+  {"name": "Cloudflare",       "url": "https://www.cloudflare.com"},
+  {"name": "Mozilla",          "url": "https://www.mozilla.org"},
+  {"name": "Linux Kernel",     "url": "https://www.kernel.org"},
+  {"name": "Example",          "url": "https://example.com", "expect_status": 200}
+]

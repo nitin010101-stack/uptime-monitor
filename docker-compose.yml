@@ -1,0 +1,12 @@
+services:
+  collector:
+    build: .
+    volumes:
+      - ./data:/app/data
+      - ./docs:/app/docs
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL

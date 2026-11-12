@@ -1,0 +1,76 @@
+name: monitor
+
+on:
+  schedule:
+    # 6 runs/day, 3 hours apart (UTC): 00:17 03:17 06:17 09:17 12:17 15:17
+    # = 05:47 08:47 11:47 14:47 17:47 20:47 IST. All on the same UTC day.
+    - cron: "17 0,3,6,9,12,15 * * *"
+  workflow_dispatch:
+    inputs:
+      maintain:
+        description: "Force the daily maintenance task to run too"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check all sites
+        run: python scripts/monitor.py
+
+      - name: Daily maintenance (last run of the day)
+        env:
+          FORCE_MAINTAIN: ${{ github.event.inputs.maintain }}
+        run: python scripts/maintain.py
+
+      - name: Build report and status page
+        run: python scripts/report.py
+
+      - name: Commit and push
+        env:
+          GIT_NAME: ${{ vars.GIT_USER_NAME }}
+          GIT_EMAIL: ${{ vars.GIT_USER_EMAIL }}
+        run: |
+          git config user.name  "${GIT_NAME:-github-actions[bot]}"
+          git config user.email "${GIT_EMAIL:-41898282+github-actions[bot]@users.noreply.github.com}"
+          git add -A .
+          if git diff --cached --quiet; then
+            echo "No changes, nothing to commit."
+          else
+            git commit -F .commit_msg
+            git pull --rebase origin "${GITHUB_REF_NAME}" || true
+            git push
+          fi
+
+      - name: Open or close incident issues
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create incident --color d73a4a --force >/dev/null 2>&1 || true
+          jq -c '.opens[]?' .incident_actions.json | while read -r item; do
+            title="[incident] $(echo "$item" | jq -r .title)"
+            body="$(echo "$item" | jq -r .body)"
+            gh issue create --title "$title" --body "$body" --label incident
+          done
+          jq -r '.closes[]?' .incident_actions.json | while read -r t; do
+            gh issue list --label incident --state open --json number,title \
+              | jq -r --arg t "[incident] $t" '.[] | select(.title==$t) | .number' \
+              | while read -r n; do
+                  gh issue close "$n" --comment "Recovered, closing automatically."
+                done
+          done
