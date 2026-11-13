@@ -1,12 +1,12 @@
 {
-  "fetched_at": "2026-11-13T06:48:09+00:00",
+  "fetched_at": "2026-11-13T17:14:01+00:00",
   "results": [
     {
       "name": "GitHub",
       "url": "https://github.com",
       "ok": true,
       "status": 200,
-      "latency_ms": 65,
+      "latency_ms": 227,
       "ssl_days_left": 75,
       "error": null
     },
@@ -15,7 +15,7 @@
       "url": "https://api.github.com",
       "ok": true,
       "status": 200,
-      "latency_ms": 73,
+      "latency_ms": 208,
       "ssl_days_left": 73,
       "error": null
     },
@@ -24,7 +24,7 @@
       "url": "https://www.githubstatus.com",
       "ok": true,
       "status": 200,
-      "latency_ms": 151,
+      "latency_ms": 323,
       "ssl_days_left": 70,
       "error": null
     },
@@ -33,7 +33,7 @@
       "url": "https://pypi.org",
       "ok": true,
       "status": 200,
-      "latency_ms": 70,
+      "latency_ms": 224,
       "ssl_days_left": 76,
       "error": null
     },
@@ -42,8 +42,8 @@
       "url": "https://registry.npmjs.org",
       "ok": true,
       "status": 200,
-      "latency_ms": 80,
-      "ssl_days_left": 68,
+      "latency_ms": 233,
+      "ssl_days_left": 67,
       "error": null
     },
     {
@@ -51,8 +51,8 @@
       "url": "https://www.python.org",
       "ok": true,
       "status": 200,
-      "latency_ms": 123,
-      "ssl_days_left": 93,
+      "latency_ms": 222,
+      "ssl_days_left": 92,
       "error": null
     },
     {
@@ -60,7 +60,7 @@
       "url": "https://www.wikipedia.org",
       "ok": true,
       "status": 200,
-      "latency_ms": 89,
+      "latency_ms": 391,
       "ssl_days_left": 50,
       "error": null
     },
@@ -69,8 +69,8 @@
       "url": "https://www.cloudflare.com",
       "ok": true,
       "status": 200,
-      "latency_ms": 100,
-      "ssl_days_left": 78,
+      "latency_ms": 327,
+      "ssl_days_left": 77,
       "error": null
     },
     {
@@ -78,7 +78,7 @@
       "url": "https://www.mozilla.org",
       "ok": true,
       "status": 200,
-      "latency_ms": 57,
+      "latency_ms": 124,
       "ssl_days_left": 66,
       "error": null
     },
@@ -87,7 +87,7 @@
       "url": "https://www.kernel.org",
       "ok": true,
       "status": 200,
-      "latency_ms": 37,
+      "latency_ms": 34,
       "ssl_days_left": 167,
       "error": null
     },
@@ -96,7 +96,7 @@
       "url": "https://example.com",
       "ok": true,
       "status": 200,
-      "latency_ms": 59,
+      "latency_ms": 166,
       "ssl_days_left": 42,
       "error": null
     }
