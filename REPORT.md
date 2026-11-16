@@ -1,17 +1,17 @@
 # Status
 
-_Last check 2026-11-15T16:23:03+00:00 UTC_
+_Last check 2026-11-16T06:31:44+00:00 UTC_
 
 | Site | State | Latency | Uptime today | SSL days left |
 |---|---|---|---|---|
-| GitHub | UP | 114 ms | 100.0% | 73 |
-| GitHub API | UP | 167 ms | 100.0% | 71 |
-| GitHub Status | UP | 85 ms | 100.0% | 68 |
-| PyPI | UP | 82 ms | 100.0% | 74 |
-| npm Registry | UP | 86 ms | 100.0% | 65 |
+| GitHub | UP | 250 ms | 100.0% | 72 |
+| GitHub API | UP | 196 ms | 100.0% | 70 |
+| GitHub Status | UP | 153 ms | 100.0% | 67 |
+| PyPI | UP | 52 ms | 100.0% | 73 |
+| npm Registry | UP | 107 ms | 100.0% | 65 |
 | Python.org | UP | 76 ms | 100.0% | 90 |
-| Wikipedia | UP | 122 ms | 100.0% | 48 |
-| Cloudflare | UP | 157 ms | 100.0% | 88 |
-| Mozilla | UP | 44 ms | 100.0% | 64 |
-| Linux Kernel | UP | 44 ms | 100.0% | 165 |
-| Example | UP | 27 ms | 100.0% | 40 |
+| Wikipedia | UP | 166 ms | 100.0% | 47 |
+| Cloudflare | UP | 199 ms | 100.0% | 88 |
+| Mozilla | UP | 48 ms | 100.0% | 63 |
+| Linux Kernel | UP | 137 ms | 100.0% | 164 |
+| Example | UP | 60 ms | 100.0% | 39 |
