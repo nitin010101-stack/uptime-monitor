@@ -1,7 +1,7 @@
 {
   "failures": {
     "GitHub": 0,
-    "GitHub API": 2,
+    "GitHub API": 0,
     "GitHub Status": 0,
     "PyPI": 0,
     "npm Registry": 0,
@@ -12,7 +12,5 @@
     "Linux Kernel": 0,
     "Example": 0
   },
-  "open": [
-    "GitHub API is DOWN"
-  ]
+  "open": []
 }
